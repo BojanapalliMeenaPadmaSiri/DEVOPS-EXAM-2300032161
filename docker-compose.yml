@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: docker
       MYSQL_DATABASE: projectdb
     ports:
-      - "3309:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -16,7 +16,7 @@ services:
     image: bojanapallimeenapadmasiri/2300032161-exam-frontend:final
     container_name: springboot
     ports:
-      - "2029:2000"
+      - "2025:2000"
     depends_on:
       - mysqldb
     restart: on-failure
@@ -27,7 +27,7 @@ services:
     image: bojanapallimeenapadmasiri/2300032161-exam-backend:final
     container_name: react
     ports:
-      - "3002:80"
+      - "2001:80"
     depends_on:
       - backend
     restart: on-failure
